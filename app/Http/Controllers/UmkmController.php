@@ -30,6 +30,7 @@ class UmkmController extends Controller
     }
 
     public function show(){
-        return view('umkmView');
+        $umkms = Umkm::all();
+        return view('umkmView', compact('umkms'));
     }
 }

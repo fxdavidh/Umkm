@@ -24,7 +24,7 @@ class CreateUmkmsTable extends Migration
             $table->string('address'); 
             $table->string('district'); 
             $table->string('number'); 
-            $table->string('image')->nullable(); 
+            $table->string('image'); 
             $table->timestamps();
         });
     }
