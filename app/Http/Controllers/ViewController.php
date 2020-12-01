@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
-    public function viewAdminCreate(){
-        return view('adminCreate');
+
+    public function viewHome(){
+        return view('index');
     }
 
     public function viewUmkmCreate(){

@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div>
+                <div>{{$error}}</div>
+            </div>
+        @endforeach
+    @endif
+
     <form action="{{route('createUmkm')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div>
@@ -47,7 +56,7 @@
         </div>
         <div>
             <label for="image">image</label>
-            <input type="text" name="image" placeholder="image">
+            <input type="file" name="image">
         </div>
         <button type="submit">Submit</button>
     </form>

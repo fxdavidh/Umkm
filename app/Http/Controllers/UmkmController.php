@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UmkmRequest;
 use App\Umkm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UmkmController extends Controller
 {
-    public function create(Request $request){
+    public function create(UmkmRequest $request){
+        
+        $path = $request -> file('image') -> store('umkmImages');
+        
         Umkm::create([
             'owner' => $request->owner, 
             'idNumber' => $request->idNumber, 
@@ -18,8 +23,13 @@ class UmkmController extends Controller
             'address' => $request->address,
             'district' => $request->district,
             'number' => $request->number,
-            'image' => $request->image
+            'image' => $path
         ]);
-        return view('umkmCreate');
+
+        return redirect(route('viewHome'))->with('success', 'Register success');
+    }
+
+    public function show(){
+        return view('umkmView');
     }
 }

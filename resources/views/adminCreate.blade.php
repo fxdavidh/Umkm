@@ -8,12 +8,19 @@
 </head>
 <body>
     <form action="/admin/create" method="POST" enctype="multipart/form-data">
-        <label for="name">Nama</label>
-        <input type="text" value="" placeholder="nama" id="name">
-        <label for="email">Email</label>
-        <input type="email" placeholder="email@gmail.com" id="email">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        @csrf
+        <div>
+            <label for="name">Nama</label>
+            <input type="text" name="name" placeholder="name">
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" name="email" placeholder="email">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="password">
+        </div>
         <button type="submit">Submit</button>
     </form>
 </body>

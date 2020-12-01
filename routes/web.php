@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/adminCreate', 'viewController@viewAdminCreate');
-Route::get('/umkmCreate', 'viewController@viewUmkmCreate');
 
+Route::get('/view/home', 'viewController@viewHome')->name('viewHome');
+Route::get('/view/umkmCreate', 'viewController@viewUmkmCreate')->name('addUmkm');
+Route::get('/view/umkm', 'UmkmController@show')->name('viewUmkm');
 Route::post('/umkm/create', 'UmkmController@create')->name('createUmkm');
