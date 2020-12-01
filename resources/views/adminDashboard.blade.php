@@ -23,7 +23,7 @@
                 <td>{{$umkm -> address}}</td>
                 <td>{{$umkm -> district}}</td>
                 <td>{{$umkm -> number}}</td>
-                <td><img src="{{$umkm -> image}}" width="100px" alt="{{'image'.$key}}"></td>
+                <td><img src="{{asset('storage/'.$umkm -> image)}}" width="100px" alt="{{'image'.$key}}"></td>
                 <td>
                     <button>Edit</button>
                     <button>Delete</button>

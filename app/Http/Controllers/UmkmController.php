@@ -33,4 +33,9 @@ class UmkmController extends Controller
         $umkms = Umkm::all();
         return view('umkmView', compact('umkms'));
     }
+
+    public function showDashboard(){
+        $umkms = Umkm::all();
+        return view('adminDashboard', compact('umkms'));
+    }
 }
