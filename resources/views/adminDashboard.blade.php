@@ -25,8 +25,12 @@
                 <td>{{$umkm -> number}}</td>
                 <td><img src="{{asset('storage/'.$umkm -> image)}}" width="100px" alt="{{'image'.$key}}"></td>
                 <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <a href="{{route('showUpdate', ['id' => $umkm->id])}}">Edit</a>
+                    <form action="{{route('umkmDelete', ['id' => $umkm->id])}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('delete')
+                        <button>Delete</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
