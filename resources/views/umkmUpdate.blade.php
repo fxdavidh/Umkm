@@ -59,6 +59,10 @@
             <label for="image">image</label>
             <input type="file" value="{{asset('storage/'.$umkmUpdate -> image)}}" name="image">
         </div> --}}
+        <div>
+            <label for="verified">verified</label>
+            <input type="text" value="{{$umkmUpdate->verified}}" name="verified" placeholder="verified">
+        </div>
         <button type="submit">Submit</button>
     </form>
 </body>

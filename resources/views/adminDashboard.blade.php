@@ -24,6 +24,7 @@
                 <td>{{$umkm -> district}}</td>
                 <td>{{$umkm -> number}}</td>
                 <td><img src="{{asset('storage/'.$umkm -> image)}}" width="100px" alt="{{'image'.$key}}"></td>
+                <td>{{$umkm -> verified}}</td>
                 <td>
                     <a href="{{route('showUpdate', ['id' => $umkm->id])}}">Edit</a>
                     <form action="{{route('umkmDelete', ['id' => $umkm->id])}}" method="POST" enctype="multipart/form-data">

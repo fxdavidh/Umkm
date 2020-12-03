@@ -61,7 +61,8 @@ class UmkmController extends Controller
             'description' => $request->description,
             'address' => $request->address,
             'district' => $request->district,
-            'number' => $request->number
+            'number' => $request->number,
+            'verified' => $request->verified
         ]);
 
         return redirect(route('viewHome'))->with('success', 'Edit success');

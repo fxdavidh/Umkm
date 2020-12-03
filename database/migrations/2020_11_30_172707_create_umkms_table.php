@@ -25,6 +25,7 @@ class CreateUmkmsTable extends Migration
             $table->string('district'); 
             $table->string('number'); 
             $table->string('image'); 
+            $table->string('verified')->default('no');
             $table->timestamps();
         });
     }

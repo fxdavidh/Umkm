@@ -13,6 +13,7 @@
     </thead>
     <tbody>
         @foreach ($umkms as $key => $umkm)
+        @if ($umkm -> verified == 'yes')
             <tr>
                 <td>{{$umkm -> owner}}</td>
                 <td>{{$umkm -> idNumber}}</td>
@@ -25,6 +26,7 @@
                 <td>{{$umkm -> number}}</td>
                 <td><img src="{{asset('storage/'.$umkm -> image)}}" width="100px" alt="{{'image'.$key}}"></td>
             </tr>
+        @endif
         @endforeach
     </tbody>
 </body>

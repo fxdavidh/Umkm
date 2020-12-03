@@ -16,6 +16,7 @@ class Umkm extends Model
         'address',
         'district',
         'number',
-        'image'
+        'image',
+        'verified',
     ];
 }

@@ -32,8 +32,8 @@ class UmkmUpdateRequest extends FormRequest
             'description' => 'required',
             'address' => 'required',
             'district' => 'required',
-            'number' => 'required|numeric'
-            // 'image' => 'required'
+            'number' => 'required|numeric',
+            // 'image' => 'required',
         ];
     }
 }
