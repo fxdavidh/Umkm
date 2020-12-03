@@ -26,9 +26,11 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('/view/umkmUpdate/{id}', 'UmkmController@showUpdate')->name('showUpdate');
     Route::patch('/view/umkmUpdate/{id}', 'UmkmController@update')->name('updateUmkm');
     Route::delete('/umkm/delete/{id}', 'UmkmController@delete')->name('umkmDelete');
+    Route::get('/logout', 'UmkmController@adminLogout')->name('adminLogout');
 });
 
+Route::prefix('admin')->group(function(){
+    Auth::routes();
+});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

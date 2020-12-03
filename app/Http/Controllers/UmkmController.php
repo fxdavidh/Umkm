@@ -65,11 +65,16 @@ class UmkmController extends Controller
             'verified' => $request->verified
         ]);
 
-        return redirect(route('viewHome'))->with('success', 'Edit success');
+        return redirect(route('viewDashboard'));
     }
 
     public function delete($id){
         Umkm::destroy($id);
-        return redirect(route('viewHome'))->with('success', 'Delete success');
+        return redirect(route('viewDashboard'));
+    }
+
+    public function adminLogout(){
+        auth()->logout();
+        return redirect(route('viewHome'));
     }
 }
