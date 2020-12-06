@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    height: 80px;
+}
+
+.nav-item{
+    font-size: large;
+    font-weight: 700;
+    margin: 0rem 1rem;
+    color: black;
+}
+
+.logo{
+    height: 60px;
+}
+
+.button{
+    background-color: #fcb085;
+    height: 60px;
+    color: white;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    font-size: larger;
+    width: auto;
+    font-weight: 700;
+}
+
+#landing-section{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 8rem;
+    align-items: center;
+}
+
+.landing-img img{
+    width: 40rem;
+}
+
+.landing-content{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.content-heading{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.text{
+    margin-bottom: 2rem;
+}
+
+#about-section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 8rem;
+    align-items: center;
+}
+
+.about-img img{
+    width: 37rem;
+}
+
+.about-content{
+    margin-left: 5rem;
+}
+
+#partner-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.umkm-card{
+    height: 30rem;
+    width: 20rem;
+    border-radius: 10px;
+    margin: 2.2rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.umkm-card:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      
+}
+
+.card-upper{
+    height: 80%;
+}
+
+.card-bottom{
+    height: 20%;
+    margin: 0rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+}
+
+.card-img{
+    width: 100%;
+    height: 35%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.umkm-name{
+    padding: 1rem 1rem;
+}
+
+.umkm-desc{
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 0rem 1rem;
+    line-height: 1.5;
+}
+
+.contact-btn{
+    background-color: #8dd9c8;
+    height: 40px;
+    color: white;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    width: auto;
+    font-weight: 500;
+}
+
+.umkm-kecamatan{
+    color: #8dd9c8;
+    margin: 0rem 1rem;
+    height: 20px;
+}
+
+#contact-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 5rem;
+    height: 90vh;
+}
+
+.contact-illus{
+    height: 28rem;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 4rem;
+    background-color: #fcb085 ;
+    align-items: center;
+    height: 50px;
+}
+.foot-left{
+    color: white;
+}
+.sosmed{
+    height: 20px;
+    color: black;
+    margin: 0rem 1rem;
+}

@@ -8,12 +8,12 @@ class Umkm extends Model
 {
     protected $fillable = [
         'owner', 
-        'idNumber', 
         'dob',
+        'email',
+        'idNumber', 
         'title', 
         'field', 
         'description',
-        'address',
         'district',
         'number',
         'image',

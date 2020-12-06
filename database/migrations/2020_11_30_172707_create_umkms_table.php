@@ -16,12 +16,12 @@ class CreateUmkmsTable extends Migration
         Schema::create('umkms', function (Blueprint $table) {
             $table->id();
             $table->string('owner');
-            $table->string('idNumber'); 
             $table->date('dob'); 
+            $table->string('email');
+            $table->string('idNumber'); 
             $table->string('title'); 
             $table->string('field'); 
             $table->string('description'); 
-            $table->string('address'); 
             $table->string('district'); 
             $table->string('number'); 
             $table->string('image'); 

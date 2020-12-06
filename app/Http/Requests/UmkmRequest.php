@@ -26,14 +26,14 @@ class UmkmRequest extends FormRequest
     {
         return [
             'owner' => 'required', 
-            'idNumber' => 'required|numeric', 
             'dob' => 'required',
+            'email' => 'required|email', 
+            'idNumber' => 'required|numeric', 
             'title' => 'required|unique:umkms', 
             'field' => 'required', 
             'description' => 'required',
-            'address' => 'required',
             'district' => 'required',
-            'number' => 'required|numeric',
+            'number' => 'required|numeric|regex:/62.+$/i',
             'image' => 'required'
         ];
     }

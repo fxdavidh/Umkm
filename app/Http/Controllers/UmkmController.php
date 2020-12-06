@@ -6,32 +6,32 @@ use App\Http\Requests\UmkmRequest;
 use App\Http\Requests\UmkmUpdateRequest;
 use App\Umkm;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Validator;
+use phpDocumentor\Reflection\Types\This;
 
 class UmkmController extends Controller
 {
+
     public function create(UmkmRequest $request){
         
         $path = $request -> file('image') -> store('umkmImages');
         
         Umkm::create([
             'owner' => $request->owner, 
-            'idNumber' => $request->idNumber, 
             'dob' => $request->dob,
+            'email' => $request->email,
+            'idNumber' => $request->idNumber, 
             'title' => $request->title, 
             'field' => $request->field, 
             'description' => $request->description,
-            'address' => $request->address,
             'district' => $request->district,
             'number' => $request->number,
             'image' => $path
         ]);
 
-        return redirect(route('viewHome'))->with('success', 'Register success');
+        return $this->show();
     }
 
-    public function show(Request $request){
+    public function show(){
         $umkms = Umkm::all();
         return view('umkmView', compact('umkms'));
     }
@@ -49,24 +49,21 @@ class UmkmController extends Controller
     public function update(UmkmUpdateRequest $request, $id){
         $umkm = Umkm::where('id', '=', $id)->first();
 
-        // $path = $request -> file('image') -> store('umkmImages');
-        // Storage::delete($umkm->image);
-
         $umkm -> update([
             'owner' => $request->owner, 
-            'idNumber' => $request->idNumber, 
             'dob' => $request->dob,
+            'email' => $request->email,
+            'idNumber' => $request->idNumber, 
             'title' => $request->title, 
             'field' => $request->field, 
             'description' => $request->description,
-            'address' => $request->address,
-            'district' => $request->district,
             'number' => $request->number,
             'verified' => $request->verified
         ]);
 
         return redirect(route('viewDashboard'));
     }
+
 
     public function delete($id){
         Umkm::destroy($id);
@@ -75,7 +72,7 @@ class UmkmController extends Controller
 
     public function adminLogout(){
         auth()->logout();
-        return redirect(route('viewHome'));
+        return redirect(route('viewUmkm'));
     }
 
     public function search(Request $request){
