@@ -31,7 +31,7 @@ class UmkmController extends Controller
         return redirect(route('viewHome'))->with('success', 'Register success');
     }
 
-    public function show(){
+    public function show(Request $request){
         $umkms = Umkm::all();
         return view('umkmView', compact('umkms'));
     }
@@ -76,5 +76,13 @@ class UmkmController extends Controller
     public function adminLogout(){
         auth()->logout();
         return redirect(route('viewHome'));
+    }
+
+    public function search(Request $request){
+        $search = $request -> search;
+        $umkm = \DB::table('Umkms')
+        ->where('field', 'like', '%'.$search.'%');
+        $umkm = $umkm -> get();
+        return view('umkmView', ['umkms' => $umkm]);
     }
 }

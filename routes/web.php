@@ -17,6 +17,7 @@ Route::prefix('view')->group(function(){
     Route::get('home', 'viewController@viewHome')->name('viewHome');
     Route::get('umkmCreate', 'viewController@viewUmkmCreate')->name('addUmkm');
     Route::get('umkm', 'UmkmController@show')->name('viewUmkm');
+    Route::get('search', 'UmkmController@search')->name('searchUmkm');
 });
 
 Route::post('/umkm/create', 'UmkmController@create')->name('createUmkm');
