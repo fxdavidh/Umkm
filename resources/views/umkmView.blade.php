@@ -80,9 +80,12 @@
                         </div>
                         <div class="card-bottom">
                             <div class="contact">
-                                <a href="https://wa.me/.$wa" class="contact-btn">
-                                    CONTACT
-                                </a>
+                                <form action="{{route('waAPI', ['id' => $umkm->id])}}" method="GET" enctype="multipart/form-data">
+                                    @csrf
+                                    <button class="contact-btn">
+                                        CONTACT
+                                    </button>
+                                </form>
                             </div>
                             <h4 class="umkm-kecamatan">
                                 {{$umkm -> district}}

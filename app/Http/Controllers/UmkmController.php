@@ -64,6 +64,13 @@ class UmkmController extends Controller
         return redirect(route('viewDashboard'));
     }
 
+    public function waAPI($id){
+        $umkm = Umkm::where('id', '=', $id)->first();
+        $wa = $umkm -> number;
+        $api = 'https://wa.me/'.$wa;
+        return redirect()->away($api);
+    }
+
 
     public function delete($id){
         Umkm::destroy($id);

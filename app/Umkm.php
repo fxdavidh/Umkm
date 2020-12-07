@@ -18,5 +18,6 @@ class Umkm extends Model
         'number',
         'image',
         'verified',
+        'waAPI'
     ];
 }
