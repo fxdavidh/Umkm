@@ -29,8 +29,7 @@
                 Why Join Us?
             </h1>
             <p class="text">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+                Website kami sengaja dirancang untuk membantu para pemilik UMKM dalam memasarkan bisnis mereka. Melihat kondisi perekonomian di Indonesia yang terbilang kurang baik, kami merangcang website ini untuk membantu pemerintah dalam meningkatkan pendapatan nasional dimasa pandemic ini.            </p>
             <div class="landing-button">
                 <a href="{{route('addUmkm')}}" class="button">
                     GET STARTED
@@ -51,8 +50,7 @@
                 About Us
             </h1>
             <p class="text">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+                UMKM by Videfel adalah website yang menaungi UMKM-UMKM di Jakarta sebagai media pemasaran UMKM. UMKM by Videfel bersifat terbuka terhadap semua UMKM-UMKM di Jakarta yang ingin ikut dipasarkan di dalam website kami.            </p>
         </div>
     </div>
 
@@ -60,14 +58,15 @@
         <h1 class="content-heading">
             Partner Kami
         </h1>
-        <form action="{{ route('searchUmkm') }}" method="GET" class="form-inline active-pink-3 active-pink-4">
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <input name="search" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                aria-label="Search">
-        </form>
-        @foreach ($umkms as $key => $umkm)
-            @if ($umkm -> verified == 'yes')
-                <div class="card-container">
+        <div class="search-container">
+            <form action="{{ route('searchUmkm') }}" method="GET" action="{{asset('/assets/regis-lower.svg')}}">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="card-container">
+            @foreach ($umkms as $key => $umkm)
+                @if ($umkm -> verified == 'yes')
                     <div class="umkm-card">
                         <div class="card-upper">
                             <img src="{{asset('storage/'.$umkm -> image)}}" alt="{{'image'.$key}}" class="card-img">
@@ -92,9 +91,9 @@
                             </h4>
                         </div>
                     </div>
-                </div>
-            @endif
-        @endforeach
+                @endif
+            @endforeach
+    </div>
     </div>
 
 

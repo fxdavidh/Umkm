@@ -162,6 +162,7 @@ a{
     padding: 0.6rem 1rem;
     width: auto;
     font-weight: 500;
+    border: none;
 }
 
 .umkm-kecamatan{
@@ -204,3 +205,29 @@ a{
     color: black;
     margin: 0rem 1rem;
 }
+
+#partner-section .search-container {
+    float: right;
+  }
+  
+  #partner-section input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  #partner-section .search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #partner-section .search-container button:hover {
+    background: #ccc;
+  }
