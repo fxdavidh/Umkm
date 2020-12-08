@@ -104,8 +104,8 @@
             <button type="submit" class="button">Submit</button>
         </form>
     </div>
-    <img src="{{asset('storage/assets/regis-upper.svg')}}" alt="decors" class="upper-ornament" />
-    <img src="{{asset('storage/assets/regis-lower.svg')}}" alt="decors" class="lower-ornament" />
+    <img src="{{asset('assets/regis-upper.svg')}}" alt="decors" class="upper-ornament" />
+    <img src="{{asset('assets/regis-lower.svg')}}" alt="decors" class="lower-ornament" />
 </body>
 
     <script>

@@ -12,7 +12,7 @@
     <div class="navbar">
         <div class="nav-left">
             <a href="{{route('viewUmkm')}}">
-                <img src="{{asset('storage/assets/logo.svg')}}" alt="logo" class="logo">
+                <img src="{{asset('assets/logo.svg')}}" alt="logo" class="logo">
             </a>
         </div>
         <div class="nav-right">
@@ -37,13 +37,13 @@
             </div>
         </div>
         <div class="landing-img">
-            <img src="{{asset('storage/assets/landing.svg')}}" alt="landing-illus">
+            <img src="{{asset('assets/landing.svg')}}" alt="landing-illus">
         </div>
     </div>
 
     <div id="about-section">
         <div class="about-img">
-            <img src="{{asset('storage/assets/about.svg')}}" alt="about-illus">
+            <img src="{{asset('assets/about.svg')}}" alt="about-illus">
         </div>
         <div class="about-content">
             <h1 class="content-heading">
@@ -99,7 +99,7 @@
 
     <div id="contact-section">
         <div class="contact-img">
-            <img src="{{asset('storage/assets/contact.svg')}}" alt="contact-illus" class="contact-illus">
+            <img src="{{asset('assets/contact.svg')}}" alt="contact-illus" class="contact-illus">
         </div>
         <div class="contact-content">
             <h1 class="content-heading">
@@ -118,19 +118,19 @@
         </div>
         <div class="foot-right">
             <a href="#">
-                <img src="{{asset('storage/assets/Path 184.svg')}}" alt="fb" class="sosmed">
+                <img src="{{asset('assets/Path 184.svg')}}" alt="fb" class="sosmed">
             </a>
             <a href="#">
-                <img src="{{asset('storage/assets/Path 185.svg')}}" alt="twt" class="sosmed">
+                <img src="{{asset('assets/Path 185.svg')}}" alt="twt" class="sosmed">
             </a>
             <a href="#">
-                <img src="{{asset('storage/assets/Path 186.svg')}}" alt="yt" class="sosmed">
+                <img src="{{asset('assets/Path 186.svg')}}" alt="yt" class="sosmed">
             </a>
             <a href="#">
-                <img src="{{asset('storage/assets/Path 187.svg')}}" alt="ig" class="sosmed">
+                <img src="{{asset('assets/Path 187.svg')}}" alt="ig" class="sosmed">
             </a>
             <a href="#">
-                <img src="{{asset('storage/assets/Path 188.svg')}}" alt="linkedin" class="sosmed">
+                <img src="{{asset('assets/Path 188.svg')}}" alt="linkedin" class="sosmed">
             </a>
         </div>
     </div>
