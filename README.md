@@ -1,4 +1,6 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Website UMKM By Videfel di develop dengan framework laravel Version 7.x <br>
+Setelah melakukan git clone, anda harus memasukkan "composer install" pada terminal<br>
+Lalu untuk penyimpanan data image, memerlukan "php artisan storage:link"<br>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
