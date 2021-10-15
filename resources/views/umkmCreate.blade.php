@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{asset('public/css/regis.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/regis.css')}}" />
     <title>Register</title>
   </head>
   <body>
@@ -118,8 +118,8 @@
         <button type="submit" class="button">Submit</button>
       </form>
     </div>
-    <img src="{{asset('public/assets/regis-upper.svg')}}" alt="decors" class="upper-ornament" />
-    <img src="{{asset('public/assets/regis-lower.svg')}}" alt="decors" class="lower-ornament" />
+    <img src="{{asset('assets/regis-upper.svg')}}" alt="decors" class="upper-ornament" />
+    <img src="{{asset('assets/regis-lower.svg')}}" alt="decors" class="lower-ornament" />
   </body>
 
   <script>
