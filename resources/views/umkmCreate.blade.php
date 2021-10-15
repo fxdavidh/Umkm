@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{asset('css/regis.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/regis.css')}}" type="text/css" />
     <title>Register</title>
   </head>
   <body>
