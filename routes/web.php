@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('view')->group(function(){
-    Route::get('home', 'viewController@viewHome')->name('viewHome');
     Route::get('umkmCreate', 'viewController@viewUmkmCreate')->name('addUmkm');
     Route::get('umkm', 'UmkmController@show')->name('viewUmkm');
     Route::get('search', 'UmkmController@search')->name('searchUmkm');
@@ -34,5 +33,3 @@ Route::middleware(['auth', 'admin'])->group(function(){
 Route::prefix('admin')->group(function(){
     Auth::routes();
 });
-
-// Route::get('/home', 'HomeController@index')->name('home');
